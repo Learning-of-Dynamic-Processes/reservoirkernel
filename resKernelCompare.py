@@ -4,6 +4,8 @@
 Created on Sun Nov 20 13:03:48 2022
 
 @author: Lukas Gonon, Lyudmila Grigoryeva, and Juan-Pablo Ortega
+We acknowledge that we compare the reservoir kernel with other kernels using 
+the codes and the packge sigkernel available at https://github.com/crispitagorico/sigkernel
 """
 import signal
 import pandas as pd
@@ -314,5 +316,5 @@ final[ker] = p_error_test_reservoir
 # plot results
 PlotResult(y_train, y_test, y_train_predict, y_test_predict, ker)
    
-PlotResultCummean(np.cumsum(p_error_test_ape_reservoir), np.cumsum(p_error_test_ape_sigPDE), 'comparison') 
+PlotResultCummean(np.cumsum(p_error_test_ape_sigPDE), np.cumsum(p_error_test_ape_reservoir), 'res_sigPDE_cumsumMAPE') 
 #/ np.arange(1,79)
