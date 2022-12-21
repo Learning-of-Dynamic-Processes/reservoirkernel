@@ -1,1 +1,1 @@
-# reservoirkernel
+# Volterra Reservoir Kernel
